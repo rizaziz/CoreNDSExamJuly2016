@@ -1,6 +1,6 @@
 package algorithm;
 import java.util.Random;
-
+import java.util.*;
 
 public class Numbers {
 
@@ -25,15 +25,32 @@ public class Numbers {
 		//Selection Sort
 		Sort algo = new Sort();
 		algo.selectionSort(num);
+		System.out.println(Arrays.toString(algo.selectionSort(num)));
 		long selectionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of "+ num.length + " numbers in Selection Sort take: " + selectionSortExecutionTime + " milli sec");
 
 		//Insertion Sort
 		algo.insertionSort(num);
+		System.out.println(Arrays.toString(algo.insertionSort(num)));
 		long insertionSortExecutionTime = algo.executionTime;
 		System.out.println("Total Execution Time of " + num.length + " numbers in Insertion Sort take: " + insertionSortExecutionTime + " milli sec");
-
+		System.out.println(Arrays.equals(algo.insertionSort(num),algo.selectionSort(num)));
 		//Continue for rest of the Sorting Algorithm....
+
+		//Bubble Sort
+		algo.bubbleSort(num);
+		System.out.println(Arrays.toString(algo.bubbleSort(num)));
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
+		System.out.println(Arrays.equals(algo.insertionSort(num),algo.bubbleSort(num)));
+
+		//Bucket Sort
+		algo.bucketSort(num);
+		System.out.println(Arrays.toString(algo.bucketSort(num)));
+		long bucketSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in bucket Sort take: " + bucketSortExecutionTime + " milli sec");
+		System.out.println(Arrays.equals(algo.insertionSort(num),algo.bucketSort(num)));
+
 
 	}
 
